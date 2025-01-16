@@ -14,6 +14,9 @@ services:
     build: ./directus
     env_file:
       - .env
+    environment:
+      CORS_ENABLED: true
+      CORS_ORIGIN: true
     ports:
       - "8055:8055"
     depends_on:
